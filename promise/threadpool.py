@@ -22,7 +22,8 @@ class ThreadPool(object):
 
     def _debug(self, message):
         with (self.debug_print_lock):
-            print "ThreadPool: %s" % message
+            #print "ThreadPool: %s" % message
+            pass
 
     def start_threads(self, thread_count):
         self._debug("Starting %i threads" % thread_count)
@@ -80,7 +81,8 @@ class WorkerThread(Thread):
 
     def _debug(self, message):
         with (self.pool.debug_print_lock):
-            print self.name+": "+message
+            #print self.name+": "+message
+            pass
 
     def run(self):
         self._debug("Starting up")
